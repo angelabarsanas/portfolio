@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angela Barsanas — Tourism & Hospitality Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #E8DDD0;
+    --clay: #C4A882;
+    --terra: #9B6B47;
+    --espresso: #3D2B1F;
+    --dusk: #6B7A6B;
+    --sky: #8FADB5;
+    --cream: #F5F0E8;
+    --white: #FDFCF9;
+    --gold: #C49A3C;
+    --text: #2A1F14;
+    --muted: #7A6B5A;
+    --card-bg: rgba(255,253,249,0.9);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    background: rgba(245,240,232,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(196,168,130,0.2);
+    padding: 0 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 600; letter-spacing: 0.04em;
+    color: var(--espresso);
+  }
+  .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--terra); }
+  .nav-toggle { display: none; cursor: pointer; font-size: 1.4rem; color: var(--espresso); background: none; border: none; }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #3D2B1F 0%, #6B4A30 40%, #8FADB5 100%);
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 6rem 2rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-tag {
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--clay); margin-bottom: 1.5rem;
+    border: 1px solid rgba(196,168,130,0.4); padding: 0.4rem 1.2rem; border-radius: 20px;
+  }
+  .hero-photo {
+    width: 130px; height: 130px; border-radius: 50%;
+    border: 3px solid rgba(196,168,130,0.5);
+    object-fit: cover; margin-bottom: 2rem;
+    background: linear-gradient(135deg, #C4A882, #8FADB5);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem; color: var(--white);
+  }
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 300; color: var(--white);
+    line-height: 1.05; letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+  }
+  .hero-title {
+    font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.65);
+    letter-spacing: 0.08em; margin-bottom: 2rem;
+  }
+  .hero-bio {
+    max-width: 560px; font-size: 1.05rem; line-height: 1.8;
+    color: rgba(255,255,255,0.75); font-weight: 300; margin-bottom: 2.5rem;
+  }
+  .hero-cta {
+    display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+  }
+  .btn-primary {
+    background: var(--clay); color: var(--white);
+    padding: 0.8rem 2rem; border-radius: 40px; text-decoration: none;
+    font-size: 0.85rem; letter-spacing: 0.05em; transition: all 0.25s;
+    border: none; cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--terra); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    padding: 0.8rem 2rem; border-radius: 40px; text-decoration: none;
+    font-size: 0.85rem; letter-spacing: 0.05em;
+    border: 1px solid rgba(255,255,255,0.3); transition: all 0.25s; cursor: pointer;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+  .scroll-hint {
+    position: absolute; bottom: 2rem;
+    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4); animation: bounce 2s infinite;
+  }
+  @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
+
+  /* SECTIONS */
+  section { padding: 5rem 0; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 3rem; }
+  .section-label {
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--clay); margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400; color: var(--espresso);
+    margin-bottom: 1rem; line-height: 1.2;
+  }
+  .section-desc {
+    font-size: 1rem; color: var(--muted); font-weight: 300;
+    line-height: 1.8; max-width: 600px; margin-bottom: 3rem;
+  }
+  .divider {
+    width: 40px; height: 2px; background: var(--clay); margin-bottom: 1.5rem;
+  }
+
+  /* ALTERNATING SECTION BACKGROUNDS */
+  .bg-white { background: var(--white); }
+  .bg-sand { background: var(--sand); }
+  .bg-cream { background: var(--cream); }
+  .bg-dark { background: var(--espresso); }
+
+  /* RESUME */
+  .resume-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+  }
+  .resume-col h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600; color: var(--espresso);
+    margin-bottom: 1.5rem; padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(196,168,130,0.3);
+  }
+  .resume-item { margin-bottom: 1.8rem; position: relative; padding-left: 1rem; }
+  .resume-item::before {
+    content: '';
+    position: absolute; left: 0; top: 6px;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--clay);
+  }
+  .resume-item-year {
+    font-size: 0.72rem; letter-spacing: 0.1em; color: var(--clay);
+    text-transform: uppercase; margin-bottom: 0.2rem;
+  }
+  .resume-item-title {
+    font-size: 0.95rem; font-weight: 500; color: var(--espresso);
+    margin-bottom: 0.2rem;
+  }
+  .resume-item-sub {
+    font-size: 0.85rem; color: var(--muted); font-weight: 300; line-height: 1.6;
+  }
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.7rem;
+    margin-top: 1rem;
+  }
+  .skill-pill {
+    background: rgba(196,168,130,0.12);
+    border: 1px solid rgba(196,168,130,0.3);
+    border-radius: 20px; padding: 0.4rem 0.9rem;
+    font-size: 0.8rem; color: var(--espresso); text-align: center;
+    transition: all 0.2s;
+  }
+  .skill-pill:hover { background: var(--clay); color: var(--white); border-color: var(--clay); }
+
+  /* LANGUAGES */
+  .lang-list { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+  .lang-badge {
+    display: flex; align-items: center; gap: 0.5rem;
+    background: var(--card-bg); border: 1px solid rgba(196,168,130,0.25);
+    border-radius: 8px; padding: 0.5rem 1rem;
+  }
+  .lang-flag { font-size: 1.2rem; }
+  .lang-name { font-size: 0.85rem; font-weight: 500; }
+  .lang-level { font-size: 0.75rem; color: var(--muted); }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;
+  }
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(196,168,130,0.2);
+    border-radius: 12px; overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(61,43,31,0.1); }
+  .project-card-header {
+    height: 140px; display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem; position: relative;
+  }
+  .project-card-body { padding: 1.2rem 1.4rem; }
+  .project-tag {
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--clay); margin-bottom: 0.4rem;
+  }
+  .project-title { font-size: 0.95rem; font-weight: 500; color: var(--espresso); margin-bottom: 0.4rem; }
+  .project-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+
+  /* INTERNSHIPS */
+  .internship-timeline { position: relative; }
+  .internship-timeline::before {
+    content: ''; position: absolute; left: 20px; top: 0; bottom: 0;
+    width: 1px; background: rgba(196,168,130,0.3);
+  }
+  .internship-item {
+    display: flex; gap: 2rem; margin-bottom: 3rem;
+    padding-left: 0; position: relative;
+  }
+  .internship-dot {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--clay); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0; z-index: 1;
+  }
+  .internship-content {
+    background: var(--card-bg);
+    border: 1px solid rgba(196,168,130,0.2);
+    border-radius: 12px; padding: 1.4rem 1.6rem; flex: 1;
+  }
+  .internship-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem;
+  }
+  .internship-org { font-size: 1rem; font-weight: 500; color: var(--espresso); }
+  .internship-duration {
+    font-size: 0.75rem; letter-spacing: 0.08em; color: var(--clay);
+    background: rgba(196,168,130,0.12); border-radius: 20px; padding: 0.25rem 0.8rem;
+  }
+  .internship-role { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.8rem; }
+  .internship-list { list-style: none; }
+  .internship-list li {
+    font-size: 0.85rem; color: var(--text); line-height: 1.7; padding: 0.2rem 0;
+    padding-left: 1rem; position: relative;
+  }
+  .internship-list li::before { content: '→'; position: absolute; left: 0; color: var(--clay); }
+
+  /* TRAVEL */
+  .travel-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.2rem;
+  }
+  .travel-card {
+    border-radius: 12px; overflow: hidden; aspect-ratio: 3/4;
+    position: relative; cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .travel-card:hover { transform: scale(1.02); }
+  .travel-card-bg {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 4rem;
+    transition: filter 0.3s;
+  }
+  .travel-card:hover .travel-card-bg { filter: brightness(0.7); }
+  .travel-card-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 1rem; background: linear-gradient(transparent, rgba(30,15,5,0.85));
+    color: var(--white);
+  }
+  .travel-card-country { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; }
+  .travel-card-dest { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; }
+
+  /* TOUR PACKAGES */
+  .packages-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;
+  }
+  .package-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(196,168,130,0.25);
+    border-radius: 16px; overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .package-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(61,43,31,0.12); }
+  .package-header {
+    padding: 1.5rem; display: flex; align-items: center; gap: 1rem;
+    border-bottom: 1px solid rgba(196,168,130,0.15);
+  }
+  .package-icon { font-size: 2rem; }
+  .package-type { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--clay); }
+  .package-name { font-size: 1.05rem; font-weight: 500; color: var(--espresso); }
+  .package-body { padding: 1.2rem 1.5rem; }
+  .package-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; color: var(--espresso); margin-bottom: 0.8rem;
+  }
+  .package-price span { font-size: 0.85rem; font-weight: 300; color: var(--muted); font-family: 'DM Sans', sans-serif; }
+  .package-highlights { list-style: none; }
+  .package-highlights li {
+    font-size: 0.82rem; color: var(--muted); padding: 0.25rem 0;
+    padding-left: 1rem; position: relative; line-height: 1.55;
+  }
+  .package-highlights li::before { content: '✓'; position: absolute; left: 0; color: var(--dusk); }
+  .package-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+  .package-tag {
+    font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 20px;
+    background: rgba(143,173,181,0.15); color: var(--sky);
+    border: 1px solid rgba(143,173,181,0.3);
+  }
+
+  /* EVENTS */
+  .events-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.2rem;
+  }
+  .event-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(196,168,130,0.2);
+    border-radius: 12px; padding: 1.4rem;
+    transition: all 0.25s;
+  }
+  .event-card:hover { transform: translateY(-3px); }
+  .event-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+  .event-name { font-size: 0.95rem; font-weight: 500; color: var(--espresso); margin-bottom: 0.3rem; }
+  .event-role { font-size: 0.78rem; color: var(--clay); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.6rem; }
+  .event-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.65; }
+  .event-outcome {
+    margin-top: 0.8rem; padding: 0.5rem 0.8rem;
+    background: rgba(107,122,107,0.08); border-radius: 6px;
+    font-size: 0.78rem; color: var(--dusk);
+  }
+
+  /* CERTIFICATIONS */
+  .certs-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;
+  }
+  .cert-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(196,168,130,0.2);
+    border-radius: 12px; padding: 1.3rem;
+    text-align: center; transition: all 0.25s;
+  }
+  .cert-card:hover { border-color: var(--clay); transform: translateY(-2px); }
+  .cert-icon { font-size: 2rem; margin-bottom: 0.7rem; }
+  .cert-name { font-size: 0.88rem; font-weight: 500; color: var(--espresso); margin-bottom: 0.3rem; }
+  .cert-issuer { font-size: 0.75rem; color: var(--muted); }
+  .cert-badge {
+    display: inline-block; margin-top: 0.6rem;
+    font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+    background: rgba(196,168,130,0.12); color: var(--clay);
+    border-radius: 20px; padding: 0.2rem 0.7rem;
+    border: 1px solid rgba(196,168,130,0.25);
+  }
+
+  /* GALLERY */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 160px;
+    gap: 0.8rem;
+  }
+  .gallery-item {
+    border-radius: 8px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; position: relative; cursor: pointer;
+    transition: transform 0.25s;
+  }
+  .gallery-item:hover { transform: scale(1.02); z-index: 1; }
+  .gallery-item.wide { grid-column: span 2; }
+  .gallery-item.tall { grid-row: span 2; }
+  .gallery-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(transparent 50%, rgba(30,15,5,0.75));
+    display: flex; align-items: flex-end; padding: 0.8rem;
+    color: var(--white); font-size: 0.75rem; opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+  /* RESEARCH */
+  .research-list { display: flex; flex-direction: column; gap: 1rem; }
+  .research-item {
+    background: var(--card-bg);
+    border: 1px solid rgba(196,168,130,0.2);
+    border-radius: 12px; padding: 1.4rem 1.6rem;
+    display: flex; gap: 1.2rem; align-items: flex-start;
+    transition: all 0.2s;
+  }
+  .research-item:hover { border-color: var(--clay); }
+  .research-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: rgba(196,168,130,0.15); display: flex; align-items: center;
+    justify-content: center; font-size: 1.3rem; flex-shrink: 0;
+  }
+  .research-title { font-size: 0.95rem; font-weight: 500; color: var(--espresso); margin-bottom: 0.3rem; }
+  .research-venue { font-size: 0.78rem; color: var(--clay); margin-bottom: 0.4rem; }
+  .research-abstract { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;
+  }
+  .testimonial-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(196,168,130,0.2);
+    border-radius: 12px; padding: 1.6rem;
+  }
+  .quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem; line-height: 0.5; color: var(--clay);
+    margin-bottom: 0.8rem; display: block;
+  }
+  .testimonial-text {
+    font-size: 0.9rem; color: var(--text); line-height: 1.75;
+    font-style: italic; margin-bottom: 1.2rem;
+    font-family: 'Cormorant Garamond', serif; font-size: 1.05rem;
+  }
+  .testimonial-author { display: flex; gap: 0.8rem; align-items: center; }
+  .author-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--clay), var(--sky));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; font-weight: 500; color: var(--white);
+  }
+  .author-name { font-size: 0.88rem; font-weight: 500; color: var(--espresso); }
+  .author-role { font-size: 0.75rem; color: var(--muted); }
+
+  /* CONTACT */
+  #contact {
+    background: var(--espresso);
+    color: var(--white);
+  }
+  #contact .section-title { color: var(--white); }
+  #contact .section-desc { color: rgba(255,255,255,0.55); }
+  #contact .divider { background: var(--clay); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; }
+  .contact-info { display: flex; flex-direction: column; gap: 1.2rem; }
+  .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
+  .contact-item-icon {
+    width: 40px; height: 40px; border-radius: 8px;
+    background: rgba(196,168,130,0.15); border: 1px solid rgba(196,168,130,0.2);
+    display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;
+  }
+  .contact-item-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--clay); }
+  .contact-item-value { font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+  .form-input, .form-textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px; padding: 0.75rem 1rem;
+    color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
+    transition: border-color 0.2s; outline: none;
+  }
+  .form-input:focus, .form-textarea:focus { border-color: var(--clay); }
+  .form-textarea { resize: vertical; min-height: 100px; }
+  .form-submit {
+    background: var(--clay); color: var(--white);
+    border: none; border-radius: 8px; padding: 0.85rem 2rem;
+    font-family: 'DM Sans', sans-serif; font-size: 0.88rem; letter-spacing: 0.05em;
+    cursor: pointer; transition: background 0.2s; text-align: center;
+  }
+  .form-submit:hover { background: var(--terra); }
+
+  /* FOOTER */
+  footer {
+    background: #2A1F14;
+    padding: 2rem 3rem;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  footer p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+  .social-links { display: flex; gap: 1rem; }
+  .social-link {
+    width: 34px; height: 34px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.4); font-size: 0.85rem; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .social-link:hover { border-color: var(--clay); color: var(--clay); }
+
+  /* MOBILE NAV */
+  @media (max-width: 768px) {
+    .nav-links { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--cream); flex-direction: column; padding: 1.5rem 2rem; gap: 1rem; border-bottom: 1px solid rgba(196,168,130,0.2); z-index: 99; }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: block; }
+    .container { padding: 0 1.5rem; }
+    .resume-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item.wide { grid-column: span 1; }
+    .form-row { grid-template-columns: 1fr; }
+    nav { padding: 0 1.5rem; }
+    footer { padding: 1.5rem; }
+  }
+
+  /* GRADIENT CARD BACKGROUNDS */
+  .grad-1 { background: linear-gradient(135deg, #E8DDD0, #C4A882); }
+  .grad-2 { background: linear-gradient(135deg, #D4E8DC, #8FADB5); }
+  .grad-3 { background: linear-gradient(135deg, #E8D4D4, #C48282); }
+  .grad-4 { background: linear-gradient(135deg, #D4D8E8, #827EC4); }
+  .grad-5 { background: linear-gradient(135deg, #E8E4D4, #C4B882); }
+  .grad-6 { background: linear-gradient(135deg, #D4E4E8, #82B8C4); }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">Angela Barsanas</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#internships">Internships</a></li>
+    <li><a href="#certifications">Certs</a></li>
+   <!-- <li><a href="#gallery">Gallery</a></li>-->
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<!-- HERO -->
+<section id="about">
+  <div id="hero">
+    <div class="hero-tag">Happy Birthday, Dearly!</div> &nbsp;
+
+    <div class="hero-photo"><img src="Img-1.jpeg" alt="Mini Ji"
+     style="
+        width: 190px;
+        height: 175px;
+        border-radius: 10%;
+        object-fit: cover;
+     "></div>
+    
+    <h1 class="hero-name">Angela Barsanas</h1>
+    <p class="hero-title">Bachelor of Science in Tourism Management · Class of 2026 · Sara, Iloilo, Philippines</p>
+    <p class="hero-bio">Passionate tourism professional dedicated to crafting meaningful travel experiences, promoting sustainable practices, and connecting people with the world's rich cultural heritage. Specializing in destination planning, event management, and responsible tourism development.</p>
+    <div class="hero-cta">
+  
+      <a href="#resume" class="btn-primary">View Resume</a>
+    </div>
+    <div class="scroll-hint">↓ Scroll to explore</div>
+  </div>
+
+  <!-- CAREER GOALS -->
+  <div class="bg-white" style="padding: 4rem 0;">
+    <div class="container">
+      <p class="section-label">Career Goals</p>
+      <div class="divider"></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem;">
+        <div style="padding: 1.5rem; border: 1px solid rgba(196,168,130,0.2); border-radius: 12px; text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.7rem;">🌍</div>
+          <div style="font-size: 0.88rem; font-weight: 500; color: var(--espresso); margin-bottom: 0.3rem;">Destination Management</div>
+          <div style="font-size: 0.78rem; color: var(--muted);">Tourism board leadership role</div>
+        </div>
+        <div style="padding: 1.5rem; border: 1px solid rgba(196,168,130,0.2); border-radius: 12px; text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.7rem;">🌿</div>
+          <div style="font-size: 0.88rem; font-weight: 500; color: var(--espresso); margin-bottom: 0.3rem;">Sustainable Tourism</div>
+          <div style="font-size: 0.78rem; color: var(--muted);">Develop eco-certified travel programs</div>
+        </div>
+        <div style="padding: 1.5rem; border: 1px solid rgba(196,168,130,0.2); border-radius: 12px; text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.7rem;">🏨</div>
+          <div style="font-size: 0.88rem; font-weight: 500; color: var(--espresso); margin-bottom: 0.3rem;">Hospitality Leadership</div>
+          <div style="font-size: 0.78rem; color: var(--muted);">Airbnb management</div>
+        </div>
+
+        <div style="padding: 1.5rem; border: 1px solid rgba(196,168,130,0.2); border-radius: 12px; text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.7rem;">✈️</div>
+          <div style="font-size: 0.88rem; font-weight: 500; color: var(--espresso); margin-bottom: 0.3rem;">Tour Operations</div>
+          <div style="font-size: 0.78rem; color: var(--muted);">Found a boutique travel agency</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume" class="bg-cream">
+  <div class="container">
+    <p class="section-label">Resume / CV</p>
+    <h2 class="section-title">Education & Experience</h2>
+    <div class="divider"></div>
+    <div class="resume-grid">
+      <div class="resume-col">
+        <h3>🎓 Education</h3>
+        <div class="resume-item">
+          <div class="resume-item-year">2022 – 2026</div>
+          <div class="resume-item-title">Bachelor of Science in Tourism Management (BSTM) </div>
+          <div class="resume-item-sub">Northern Iloilo State University (NISU) · CGPA: 10/10</div>
+        </div>
+        <div class="resume-item">
+          <div class="resume-item-year">2020 – 2022</div>
+          <div class="resume-item-title">Higher Secondary</div>
+          <div class="resume-item-sub">San Rafael, Iloilo · 100%</div>
+        </div>
+        <div class="resume-item">
+          <div class="resume-item-year">2019 – 2020</div>
+          <div class="resume-item-title">Secondary School </div>
+          <div class="resume-item-sub">San Rafael, Iloilo · 100%</div>
+        </div>
+
+        <h3 style="margin-top: 2rem;">🌐 Languages</h3>
+        <div class="lang-list">
+          <div class="lang-badge"><span class="lang-flag">𝐄𝐍</span><div><div class="lang-name">English</div><div class="lang-level">Fluent </div></div></div>
+          <div class="lang-badge"><span class="lang-flag">𝐓𝐆</span><div><div class="lang-name">Tagalog</div><div class="lang-level">Native</div></div></div>
+          <div class="lang-badge"><span class="lang-flag">𝐇𝐈</span><div><div class="lang-name">Hiligaynon</div><div class="lang-level">Native</div></div></div>
+          <div class="lang-badge"><span class="lang-flag">𝐆𝐉</span><div><div class="lang-name">Gujarati</div><div class="lang-level">Basic (𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠?)</div></div></div>
+        </div>
+      </div>
+
+      <div class="resume-col">
+        <h3>🛠 Skills</h3>
+        <div style="margin-bottom: 1rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--clay);">Technical</div>
+        <div class="skills-grid">
+          <div class="skill-pill">MS Office</div>
+          <div class="skill-pill">Excel / Data</div>
+          <div class="skill-pill">Canva</div>
+          <div class="skill-pill">Digital Mktg</div>
+          <div class="skill-pill">SEO / SEM</div>
+          <div class="skill-pill">Social Media</div>
+          <div class="skill-pill">Google Ads</div>
+          <div class="skill-pill">WordPress</div>
+        </div>
+        <div style="margin: 1.5rem 0 0.8rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--clay);">Soft Skills</div>
+        <div class="skills-grid">
+          <div class="skill-pill">Customer Service</div>
+          <div class="skill-pill">Communication</div>
+          <div class="skill-pill">Leadership</div>
+          <div class="skill-pill">Teamwork</div>
+          <div class="skill-pill">Problem Solving</div>
+          <div class="skill-pill">Negotiation</div>
+          <div class="skill-pill">Cultural IQ</div>
+          <div class="skill-pill">Time Management</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMIC PROJECTS -->
+<section id="projects" class="bg-white">
+  <div class="container">
+    <p class="section-label">Academic Projects</p>
+    <h2 class="section-title">Research & Coursework</h2>
+    <div class="divider"></div>
+    <p class="section-desc">A selection of in-depth academic projects spanning destination analysis, sustainable development, and tourism marketing.</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-card-header grad-1">🗺️</div>
+        <div class="project-card-body">
+          <div class="project-tag">Event Tourism</div>
+          <div class="project-title">International Cultural Festival Proposal</div>
+          <div class="project-desc">Planned a multi-day cultural festival including sponsorship acquisition, venue management, visitor flow planning, risk assessment, and marketing strategy.</div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-header grad-2">📊</div>
+        <div class="project-card-body">
+          <div class="project-tag">Market Research</div>
+          <div class="project-title">Travel Agency Operations Case Study</div>
+          <div class="project-desc">Analyzed booking systems, customer service workflows, package customization, and revenue streams of a regional travel agency.</div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-header grad-3">🏨</div>
+        <div class="project-card-body">
+          <div class="project-tag">Hospitality Management</div>
+          <div class="project-title">Hotel Service Quality Assessment</div>
+          <div class="project-desc">Proposed a UNWTO-aligned sustainable tourism model with community inclusion, visitor cap guidelines, and revenue sharing for Maldhari communities.</div>
+        </div>
+      </div>
+      <!-- 
+      <div class="project-card">
+        <div class="project-card-header grad-4">📣</div>
+        <div class="project-card-body">
+          <div class="project-tag">Tourism Marketing</div>
+          <div class="project-title">Vadodara City Tourism Campaign — "Royal Baroda"</div>
+          <div class="project-desc">Full digital marketing campaign concept including influencer strategy, Instagram content calendar, and visitor persona mapping for heritage tourism.</div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-header grad-5">🏛️</div>
+        <div class="project-card-body">
+          <div class="project-tag">Cultural Heritage</div>
+          <div class="project-title">Stepwell (Vav) Heritage Circuit — Gujarat</div>
+          <div class="project-desc">Identified 12 undervisited stepwells across North Gujarat and designed a heritage trail product with interpretation signage and tour guide training plan.</div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-card-header grad-6">🎪</div>
+        <div class="project-card-body">
+          <div class="project-tag">Event Management</div>
+          <div class="project-title">Navratri Tourism Festival Planning Model</div>
+          <div class="project-desc">Case study and operational blueprint for scaling Vadodara's Navratri celebrations as an international tourism product, including safety, logistics, and media strategy.</div>
+        </div>
+      </div>
+       -->
+    </div>
+  </div>
+</section>
+
+<!-- INTERNSHIPS -->
+<section id="internships" class="bg-sand">
+  <div class="container">
+    <p class="section-label">Internship Experience</p>
+    <h2 class="section-title">Professional Training</h2>
+    <div class="divider"></div>
+    <p class="section-desc">Hands-on experience across multiple sectors of the tourism and hospitality industry.</p>
+    <div class="internship-timeline">
+      <div class="internship-item">
+        <div class="internship-dot">🎪</div>
+        <div class="internship-content">
+          <div class="internship-header">
+            <div><div class="internship-org">Boracay Port Office , Boracay</div><div class="internship-role">Front Office & Guest Relations Intern</div></div>
+            <div class="internship-duration">Feb – May 2026 · 16 weeks</div>
+          </div>
+          <ul class="internship-list">
+            <li>Handled check-in/check-out for 140+ guests daily, achieving 96% guest satisfaction score</li>
+            <li>Assisted visitors with travel information, local attractions, transportation options, and itinerary planning.</li>
+            <li>Maintained visitor records, handled documentation, and supported daily front desk operations efficiently.</li>
+            <li>Resolved visitor concerns and service requests with a customer-focused approach, ensuring timely issue resolution.</li>
+          </ul>
+          <div style="margin-top: 0.8rem; padding: 0.5rem 0.8rem; background: rgba(196,168,130,0.1); border-radius: 6px; font-size: 0.78rem; color: var(--terra);">🏆 Best Intern of the Batch </div>
+        </div>
+      </div>
+      <!-- 
+      <div class="internship-item">
+        <div class="internship-dot">✈️</div>
+        <div class="internship-content">
+          <div class="internship-header">
+            <div><div class="internship-org">Thomas Cook India Ltd.</div><div class="internship-role">Travel Consultant Intern</div></div>
+            <div class="internship-duration">Nov – Dec 2023 · 6 weeks</div>
+          </div>
+          <ul class="internship-list">
+            <li>Assisted in designing 15+ international holiday packages for corporate and leisure clients</li>
+            <li>Used Amadeus GDS for flight searches, seat allocation, and ticketing</li>
+            <li>Prepared itineraries, visa documentation checklists, and travel insurance guidance</li>
+            <li>Contributed to a 12% upsell conversion rate on add-on services</li>
+          </ul>
+        </div>
+      </div>
+      <div class="internship-item">
+        <div class="internship-dot">🎪</div>
+        <div class="internship-content">
+          <div class="internship-header">
+            <div><div class="internship-org">Gujarat Tourism Corporation</div><div class="internship-role">Events & Marketing Intern</div></div>
+            <div class="internship-duration">Jan – Feb 2024 · 6 weeks</div>
+          </div>
+          <ul class="internship-list">
+            <li>Supported logistics coordination for Vibrant Gujarat Tourism Summit 2024</li>
+            <li>Created social media content (Reels, Stories) that reached 85,000+ impressions</li>
+            <li>Liaised with 20+ vendors and managed delegate registration database</li>
+            <li>Drafted press notes and media kits for international press attendees</li>
+          </ul>
+        </div>
+      </div>
+       -->
+    </div>
+  </div>
+</section>
+
+<!-- TRAVEL PORTFOLIO -->
+<section id="travel" class="bg-white">
+  <div class="container">
+    <p class="section-label"> Future Travel Portfolio</p>
+    <h2 class="section-title">Future Travel Plans with Tallie</h2>
+    <div class="divider"></div>
+    <p class="section-desc">Future travel plans and dream destinations that reflect my passion for tourism, hospitality, cultural heritage, and global exploration</p>
+    <div class="travel-grid">
+      <div class="travel-card"><div class="travel-card-bg grad-1">🏔️</div><div class="travel-card-info"><div class="travel-card-country">India</div><div class="travel-card-dest">Leh-Ladakh</div></div></div>
+      <div class="travel-card"><div class="travel-card-bg grad-2">🌊</div><div class="travel-card-info"><div class="travel-card-country">philippines</div><div class="travel-card-dest">Siargao Island</div></div></div>
+    <div class="travel-card"><div class="travel-card-bg grad-2">⛩️</div><div class="travel-card-info"><div class="travel-card-country">Japan</div><div class="travel-card-dest">Tokyo & Kyoto</div></div></div>
+
+    <div class="travel-card"><div class="travel-card-bg grad-3">🏛️</div><div class="travel-card-info"><div class="travel-card-country">Italy</div><div class="travel-card-dest">Rome, Venice & Florence</div></div></div>
+    <div class="travel-card"><div class="travel-card-bg grad-5">🏔️</div><div class="travel-card-info"><div class="travel-card-country">Switzerland</div><div class="travel-card-dest">Interlaken & Zermatt</div></div></div>
+    <div class="travel-card"><div class="travel-card-bg grad-6">🕌</div><div class="travel-card-info"><div class="travel-card-country">Turkey</div><div class="travel-card-dest">Istanbul & Cappadocia</div></div></div>
+    <div class="travel-card"><div class="travel-card-bg" style="background: linear-gradient(135deg,#D4E8DC,#6B7A6B)">🌸</div><div class="travel-card-info"><div class="travel-card-country">South Korea</div><div class="travel-card-dest">Seoul & Busan</div></div></div>
+    <div class="travel-card"><div class="travel-card-bg" style="background: linear-gradient(135deg,#E8DDD0,#9B6B47)">🌉</div><div class="travel-card-info"><div class="travel-card-country">Canada</div><div class="travel-card-dest">Vancouver & Banff</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENT MANAGEMENT
+<section id="events" class="bg-sand">
+  <div class="container">
+    <p class="section-label">Event Management</p>
+    <h2 class="section-title">Events Organised & Assisted</h2>
+    <div class="divider"></div>
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="event-icon">🎭</div>
+        <div class="event-name">Yatrikaa — Annual Tourism Festival</div>
+        <div class="event-role">Overall Coordinator</div>
+        <div class="event-desc">2-day inter-college tourism festival with travel quiz, destination presentation competition, and a mini travel fair. 400+ attendees from 8 colleges.</div>
+        <div class="event-outcome">✓ Secured ₹1.2L sponsorship · Best Event of Year 2023</div>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">🌐</div>
+        <div class="event-name">Vibrant Gujarat Tourism Summit 2024</div>
+        <div class="event-role">Delegate Relations Intern</div>
+        <div class="event-desc">Managed registration, hospitality, and media coordination for 300+ national and international delegates at GTC's flagship annual summit.</div>
+        <div class="event-outcome">✓ Zero logistical errors over 2-day event</div>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">🎪</div>
+        <div class="event-name">Navratri Cultural Tourism Night</div>
+        <div class="event-role">Stage Manager</div>
+        <div class="event-desc">Produced a curated evening blending Garba performances with heritage tourism storytelling for international students visiting Vadodara during Navratri.</div>
+        <div class="event-outcome">✓ 280 attendees · Featured in Times of India</div>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">📸</div>
+        <div class="event-name">Responsible Tourism Photo Exhibition</div>
+        <div class="event-role">Curator & Organiser</div>
+        <div class="event-desc">Curated a 3-day public photography exhibition at MSU highlighting sustainable tourism practices and indigenous community stories from across India.</div>
+        <div class="event-outcome">✓ 1,200+ footfall · Partnered with 2 NGOs</div>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">🏫</div>
+        <div class="event-name">Faculty Development Programme — Tourism</div>
+        <div class="event-role">Logistics Coordinator</div>
+        <div class="event-desc">Assisted in managing a 3-day national FDP on Experiential Tourism Education hosted by MSU's Department of Tourism Management.</div>
+        <div class="event-outcome">✓ 60 faculty participants · All sessions rated 4.5+/5</div>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">🌍</div>
+        <div class="event-name">World Tourism Day Campus Campaign</div>
+        <div class="event-role">Campaign Lead</div>
+        <div class="event-desc">Organised September 27 awareness campaign including city heritage walk, street play, and social media drive with #VisitVadodara reaching 22K impressions.</div>
+        <div class="event-outcome">✓ 500+ students engaged · 2 media coverages</div>
+      </div>
+    </div>
+  </div>
+</section>
+ -->
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="bg-white">
+  <div class="container">
+    <p class="section-label">Certifications</p>
+    <h2 class="section-title">Professional Credentials</h2>
+    <div class="divider"></div>
+    <div class="certs-grid">
+      <div class="cert-card"><div class="cert-icon">🏨</div><div class="cert-name">Hospitality Fundamentals</div><div class="cert-issuer"></div><div class="cert-badge">Hospitality</div></div>
+      <div class="cert-card"><div class="cert-icon">📱</div><div class="cert-name">Digital Marketing for Tourism</div><div class="cert-issuer"></div><div class="cert-badge">Marketing</div></div>
+      <div class="cert-card"><div class="cert-icon">🩺</div><div class="cert-name">First Aid & CPR Certification</div><div class="cert-issuer"></div><div class="cert-badge">Safety</div></div>
+      <div class="cert-card"><div class="cert-icon">🌿</div><div class="cert-name">Sustainable Tourism Planning</div><div class="cert-issuer"></div><div class="cert-badge">Sustainable</div></div>
+     </div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY
+<section id="gallery" class="bg-cream">
+  <div class="container">
+    <p class="section-label">Photography Gallery</p>
+    <h2 class="section-title">Visual Storytelling</h2>
+    <div class="divider"></div>
+    <p class="section-desc">A curated selection of travel and tourism photography capturing landscapes, cultural moments, and heritage sites across Philippines.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item wide grad-1" style="font-size:4rem">  <div class="gallery-overlay">Rann of Kutch at dawn</div></div>
+      <div class="gallery-item grad-2">🏔️<div class="gallery-overlay">Ladakh mountains</div></div>
+      <div class="gallery-item tall grad-3" style="font-size:4rem">🕌<div class="gallery-overlay">Jaisalmer Fort</div></div>
+      <div class="gallery-item grad-4">🌊<div class="gallery-overlay">Goa coastline</div></div>
+      <div class="gallery-item grad-5">🌿<div class="gallery-overlay">Kerala backwaters</div></div>
+      <div class="gallery-item wide grad-6">🎪<div class="gallery-overlay">Navratri Festival, Vadodara</div></div>
+      <div class="gallery-item grad-1">🏯<div class="gallery-overlay">Orchha Palace ruins</div></div>
+      <div class="gallery-item tall" style="background:linear-gradient(135deg,#D4E8DC,#6B7A6B)">🌸<div class="gallery-overlay">Patan Rani ki Vav</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#E8DDD0,#C4A882)">🎭<div class="gallery-overlay">Local folk dancers</div></div>
+      <div class="gallery-item wide" style="background:linear-gradient(135deg,#D4D8E8,#8FADB5)">🌃<div class="gallery-overlay">Ahmedabad Heritage Walk, night</div></div>
+    </div>
+  </div>
+</section>
+ -->
+<!-- RESEARCH 
+<section id="research" class="bg-white">
+  <div class="container">
+    <p class="section-label">Research & Publications</p>
+    <h2 class="section-title">Academic Contributions</h2>
+    <div class="divider"></div>
+    <div class="research-list">
+      <div class="research-item">
+        <div class="research-icon">📄</div>
+        <div>
+          <div class="research-title">Overtourism and Carrying Capacity: A Case Study of Somnath, Gujarat</div>
+          <div class="research-venue">Presented at National Tourism Students Conference, Pune — March 2024</div>
+          <div class="research-abstract">Analysed visitor volume data, surveyed 200 pilgrims and local residents, and proposed a timed-entry system and sustainable visitor management framework for the Somnath temple complex.</div>
+        </div>
+      </div>
+      <div class="research-item">
+        <div class="research-icon">📝</div>
+        <div>
+          <div class="research-title">The Role of Influencer Marketing in Domestic Tourism Revival Post-COVID</div>
+          <div class="research-venue">Published in MSU Tourism Research Journal, Vol. 4 — 2024</div>
+          <div class="research-abstract">Quantitative study examining the correlation between travel influencer engagement rates and booking intent among 18–35-year-old Indian travellers using regression analysis.</div>
+        </div>
+      </div>
+      <div class="research-item">
+        <div class="research-icon">🔬</div>
+        <div>
+          <div class="research-title">Community-Based Tourism as a Poverty Alleviation Tool: Evidence from Kutch Artisan Villages</div>
+          <div class="research-venue">Term Dissertation — Tourism Management (BBA Final Year) — 2025</div>
+          <div class="research-abstract">Three-month ethnographic and economic study of five CBT initiatives in Bhuj and Anjar, assessing income diversification, empowerment outcomes, and scalability with policy recommendations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="bg-sand">
+  <div class="container">
+    <p class="section-label">Testimonials</p>
+    <h2 class="section-title">What Others Say</h2>
+    <div class="divider"></div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="testimonial-text"> I've known Angela for 22 years, and one thing never changes, if she decides she's right, even Google starts questioning itself! <br>
+
+
+
+She may be stubborn, but she has the biggest heart. No matter what, she's always there for her brothers, helping them whenever they need her. Surely wherever Angela will go, she will bring laughter, joy, and enough energy to keep everyone happy. 
+ </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">Mj</div>
+          <div><div class="author-name">Mama ji</div><div class="author-role">Mother Po</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="testimonial-text">I've known Miss Mini for just 3 months and 2 days, but somehow it feels like we've known each other for a lifetime. <br>
+
+
+
+Yes, she can get a little tempo sometimes but I'm slowly learning how to handle that! We share quite a lot similarities, yet we're also completely opposite in many ways. Strangely enough, I think that's what makes our bond unique.
+
+
+
+Sometimes the best people enter our lives unexpectedly, and Miss Mini is definitely one of those special people. She has become my home away from home</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PS</div>
+          <div><div class="author-name">Mr. Tallie</div><div class="author-role">Bf ji</div></div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Let's Connect</h2>
+    <div class="divider"></div>
+    <p class="section-desc">Open to internship opportunities, collaborations, freelance projects, and conversations about tourism. Reach out — I'd love to hear from you.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div><div class="contact-item-label">Email</div><div class="contact-item-value">angelabarsanas09@gmail.com</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">💼</div>
+          <div><div class="contact-item-label">LinkedIn</div><div class="contact-item-value">linkedin.com/in/</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div><div class="contact-item-label">Location</div><div class="contact-item-value">San Rafael, Iloilo</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div><div class="contact-item-label">Phone</div><div class="contact-item-value">+63 9XXXXXXXX0</div></div>
+        </div>
+        <!--
+        <div class="contact-item">
+          <div class="contact-item-icon">📷</div>
+          <div><div class="contact-item-label">Instagram</div><div class="contact-item-value">@aryan.on.the.road</div></div>
+        </div>
+        -->
+      </div>
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-input" placeholder="Your name"></div>
+          <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="your@email.com"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Subject</label><input type="text" class="form-input" placeholder="How can I help?"></div>
+        <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell me about your project or opportunity..."></textarea></div>
+        <button class="form-submit" onclick="alert('Thank you! I will get back to you within 24 hours.')">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Angela Barsanas · Tourism & Hospitality Portfolio</p>
+  <div class="social-links">
+    <a class="social-link" href="#" title="LinkedIn">in</a>
+  
+    <a class="social-link" href="#" title="Email">@</a>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll offset for fixed nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+        document.getElementById('navLinks').classList.remove('open');
+      }
+    });
+  });
+
+  // Nav active state on scroll
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
+    navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + current ? 'var(--terra)' : ''; });
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.project-card, .internship-content, .package-card, .event-card, .cert-card, .research-item, .testimonial-card, .travel-card').forEach(el => {
+    el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
